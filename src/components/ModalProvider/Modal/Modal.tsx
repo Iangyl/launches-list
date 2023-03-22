@@ -1,6 +1,6 @@
 import React from 'react';
 import ModalStyled from './ModalStyled';
-//import CloseButton from 'components/CloseButton/CloseButton';
+import CloseButton from 'components/CloseButton/CloseButton';
 
 const Modal = ({
   closeModal,
@@ -11,9 +11,7 @@ const Modal = ({
 }) => {
   return (
     <ModalStyled>
-      <div>
-        {/* <CloseButton color="black" thickness="1px" size="16px" />*/}
-      </div>
+      <CloseButton color="black" thickness="1px" size="16px" onClick={closeModal} />
       {children}
     </ModalStyled>
   );

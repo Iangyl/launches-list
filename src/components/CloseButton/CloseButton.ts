@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-/*
+
 const CloseButton = styled.button`
+  position: absolute;
   display: block;
   margin: 0;
   padding: 0;
   border: 0;
   background: none;
-  position: relative;
   width: ${(props) => props.size};
   height: ${(props) => props.size};
+  right: 20px;
 
   &:before,
   &:after {
@@ -29,7 +30,10 @@ const CloseButton = styled.button`
   &:after {
     transform: rotate(-45deg);
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default CloseButton;
-*/
