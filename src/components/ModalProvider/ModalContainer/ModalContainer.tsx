@@ -13,7 +13,7 @@ const ModalContainer = ({
 }) => {
   return createPortal(
     isOpen ? (
-      <ModalContainerStyled onClick={() => closeModal()}>
+      <ModalContainerStyled>
         <Modal closeModal={closeModal}>
           <LaunchInfo />
         </Modal>

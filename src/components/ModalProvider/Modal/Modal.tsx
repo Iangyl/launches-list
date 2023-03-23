@@ -11,7 +11,12 @@ const Modal = ({
 }) => {
   return (
     <ModalStyled>
-      <CloseButton color="black" thickness="1px" size="16px" onClick={closeModal} />
+      <CloseButton
+        color="black"
+        thickness="1px"
+        size="16px"
+        onClick={closeModal}
+      />
       {children}
     </ModalStyled>
   );

@@ -1,6 +1,12 @@
+import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
-const CloseButton = styled.button`
+interface CloseButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  size?: string;
+  thickness?: string;
+}
+
+const CloseButton = styled.button<CloseButtonProps>`
   position: absolute;
   display: block;
   margin: 0;
