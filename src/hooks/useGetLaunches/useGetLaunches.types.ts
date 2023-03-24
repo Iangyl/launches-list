@@ -73,3 +73,5 @@ export interface IFairings {
   recovered: boolean;
   ships: string[];
 }
+
+export type Filter = Record<string, string | number | string[] | number[]>;

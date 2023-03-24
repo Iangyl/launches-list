@@ -18,7 +18,6 @@ const LaunchInfo = () => {
   const urlChunks = window.location.href.split('/');
   const id = urlChunks[urlChunks.length - 1];
   const launch = useGetLaunch(id) as ILaunch;
-  console.log(launch);
   return (
     <LaunchInfoStyled>
       <h2>{launch?.name}</h2>
@@ -38,9 +37,13 @@ const LaunchInfo = () => {
         <div>
           <p>
             <Property>Success:</Property>{' '}
-            <Success backgroundColor={launch?.success ? 'green' : 'red'}>
-              {launch?.success.toString()}
-            </Success>
+            {launch?.success !== undefined && launch?.success !== null ? (
+              <Success backgroundColor={launch?.success ? 'green' : 'red'}>
+                {launch?.success?.toString()}
+              </Success>
+            ) : (
+              <Success backgroundColor="gray">unknown</Success>
+            )}
           </p>
           <p>
             <Property>Flight number:</Property> {launch?.flight_number}
