@@ -66,6 +66,7 @@ const StatusToggle = ({ onChange }: { onChange: (value: string) => void }) => {
                 name={toggle.value}
                 type="radio"
                 value={toggle.value}
+                checked={toggle.checked}
                 onChange={handleChange}
               />
             </LabelLeft>
@@ -82,6 +83,8 @@ const StatusToggle = ({ onChange }: { onChange: (value: string) => void }) => {
                 id={toggle.value}
                 name={toggle.value}
                 type="radio"
+                value={toggle.value}
+                checked={toggle.checked}
                 onChange={handleChange}
               />
             </LabelRight>
@@ -98,6 +101,8 @@ const StatusToggle = ({ onChange }: { onChange: (value: string) => void }) => {
                 id={toggle.value}
                 name={toggle.value}
                 type="radio"
+                value={toggle.value}
+                checked={toggle.checked}
                 onChange={handleChange}
               />
             </Label>
